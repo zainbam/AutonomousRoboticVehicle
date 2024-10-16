@@ -1,6 +1,6 @@
 # AutonomousRoboticVehicle
 
-This repository contains the code for an AI-based **Autonomous Vehicle System** that focuses on self-driving capabilities, scene understanding, and intelligent navigation. The project integrates multiple sensors, computer vision techniques, and machine learning algorithms to allow the vehicle to understand its environment, make real-time decisions, and navigate autonomously. **Note:** This repository only includes the autonomous driving code, excluding any solar-related functionalities.
+This repository contains the code for an AI-based **Autonomous Vehicle System** that focuses on self-driving capabilities, scene understanding, and intelligent navigation. The project integrates multiple sensors, computer vision techniques, and machine learning algorithms to allow the vehicle to understand its environment, make real-time decisions, and navigate autonomously. 
 
 ## Project Overview
 
