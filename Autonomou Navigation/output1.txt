@@ -1,0 +1,14 @@
+//  THIS WAS DONE FOR MY GPS POINTS
+
+
+Head <b>east</b> on <b>Hostel Rd</b><div style="font-size:0.9em">Pass by Hostel 3 (on the right)</div>
+Turn <b>right</b> to stay on <b>Hostel Rd</b><div style="font-size:0.9em">Pass by Hostel 3 (on the right)</div>
+Turn <b>left</b> to stay on <b>Hostel Rd</b><div style="font-size:0.9em">Pass by Administration Block (on the right)</div>
+Turn <b>left</b> toward <b>Residential Colony Rd</b>/<wbr/><b>Sahibzada Abdul Qayyum Rd</b>
+Turn <b>right</b> onto <b>Residential Colony Rd</b>/<wbr/><b>Sahibzada Abdul Qayyum Rd</b><div style="font-size:0.9em">Drive along the park (on the right for 130m)</div>
+Turn <b>right</b> at <b>Faculty Club Rd</b>
+Turn <b>left</b> toward <b>Tuck Rd</b>
+Turn <b>left</b> at GIKI Main Store onto <b>Tuck Rd</b>
+Turn <b>right</b> at Hot And Spicy<div style="font-size:0.9em">Destination will be on the left</div>
+Total Duration: 4 mins
+Total Distance: 1.0 km

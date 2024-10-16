@@ -1,0 +1,61 @@
+from math import radians, sin, cos, sqrt, atan2
+data = loaded_data
+
+def haversine_distance(coord1, coord2):
+    # Radius of the Earth in kilometers
+    R = 6371.0
+
+    # Convert latitude and longitude from degrees to radians
+    lat1, lon1 = radians(coord1[0]), radians(coord1[1])
+    lat2, lon2 = radians(coord2[0]), radians(coord2[1])
+
+    # Differences in coordinates
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+
+    # Haversine formula
+    a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+
+    # Calculate distance in kilometers
+    distance_km = R * c
+
+    # Convert distance to meters
+    distance_meters = distance_km * 1000
+
+    return distance_meters
+
+def simulate_driving(data):
+    steps = data["routes"][0]["legs"][0]["steps"]
+
+    for i, step in enumerate(steps, start=1):
+        print(f"Drive straight until the next instruction.")
+        print(step["html_instructions"])
+
+        # Extract start and end locations for each step
+        start_location = step["start_location"]
+        end_location = step["end_location"]
+
+        print(f"Start Location: {start_location['lat']}, {start_location['lng']}")
+        print(f"End Location: {end_location['lat']}, {end_location['lng']}")
+        print("---------------------")
+
+        # Check if there is a turn instruction
+        if "maneuver" in step:
+            # Keep asking for coordinates until the user is within 5 meters of the turn
+            while True:
+                # Ask user to enter coordinates
+                user_coordinates = tuple(map(float, input("Enter coordinates (lat, lon) in decimal degrees: ").split(',')))
+
+                # Check distance between user coordinates and turn start location
+                distance = haversine_distance(user_coordinates, (start_location['lat'], start_location['lng']))
+                print(f"Distance to Turn {i-1} start location: {distance} meters")
+
+                # Check if user is near the turn
+                if distance <= 5:
+                    print(f"You have completed Turn {i-1}!")
+                    break  # Exit the loop if the user is within 5 meters
+                else:
+                    print("Keep going. This is not the turn.")
+
+simulate_driving(loaded_data)
